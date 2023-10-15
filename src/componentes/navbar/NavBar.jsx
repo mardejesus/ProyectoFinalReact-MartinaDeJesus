@@ -3,20 +3,22 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import CartWidget from '../cartwidget/CartWidget';
+import { NavLink } from 'react-router-dom';
+import './NavBar.css';
 
 function NavBar() {
   return (
     <>
       <Navbar bg="dark" data-bs-theme="dark">
-        <Container>
-          <Navbar.Brand href="#home">TienFLA</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="/">Inicio</Nav.Link>
-            <Nav.Link href="/remeras">Remeras</Nav.Link>
-            <Nav.Link href="/bermudas">Bermudas</Nav.Link>
-            <Nav.Link href="/medias">Medias</Nav.Link>
+        <Container id='contenedor'>
+          <Navbar.Brand id="marca">TienFLA</Navbar.Brand>
+          <Nav id='categorias'>
+            <NavLink to="/" activeClassName className="Option">Inicio</NavLink>
+            <NavLink to="/category/remera" activeClassName className="Option">Remeras</NavLink>
+            <NavLink to="/category/bermuda" activeClassName className="Option">Bermudas</NavLink>
+            <NavLink to="/category/medias" activeClassName className="Option">Medias</NavLink>
           </Nav>
-          <CartWidget count={1}/>
+          <CartWidget/>
         </Container>
       </Navbar>
     </>

@@ -5,3 +5,8 @@
     font-size: 20px;
     font-weight: bold;
 }
+
+.itemsContainer{
+    padding-left: 5em;
+    padding-right: 5em;
+}

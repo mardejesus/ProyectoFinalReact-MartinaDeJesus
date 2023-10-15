@@ -1,0 +1,18 @@
+#categorias{
+    margin: 0px;
+}
+
+.Option{
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.Option:hover{
+    background-color: rgb(132, 0, 255);
+    color: black;
+}
+
+#marca{
+    color:rgb(132, 0, 255);
+}
