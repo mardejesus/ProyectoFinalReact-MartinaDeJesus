@@ -10,6 +10,8 @@ export const CartProvider = ({ children }) => { // función con l+ogica del carr
 
     const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
 
+    const total = cart.reduce((total, item) => total + (item.quantity*item.price), 0);
+
     const addItem = (item, quantity) => { // añadir elemento a carrito
         if(!isInCart(item.id)){
             setCart(prev => [...prev, {...item, quantity}])
@@ -32,7 +34,7 @@ export const CartProvider = ({ children }) => { // función con l+ogica del carr
     }
 
     return (
-        <CartContext.Provider value={{totalQuantity, cart, addItem, removeItem, clearCart }}>
+        <CartContext.Provider value={{totalQuantity, cart, addItem, removeItem, clearCart, total }}>
             {children}
         </CartContext.Provider>
     )
