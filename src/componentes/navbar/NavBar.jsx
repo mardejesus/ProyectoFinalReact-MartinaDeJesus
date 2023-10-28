@@ -14,9 +14,9 @@ function NavBar() {
           <Navbar.Brand id="marca">TienFLA</Navbar.Brand>
           <Nav id='categorias'>
             <NavLink to="/" activeClassName className="Option">Inicio</NavLink>
-            <NavLink to="/category/remera" activeClassName className="Option">Remeras</NavLink>
-            <NavLink to="/category/bermuda" activeClassName className="Option">Bermudas</NavLink>
-            <NavLink to="/category/medias" activeClassName className="Option">Medias</NavLink>
+            <NavLink to="/remera" activeClassName className="Option">Remeras</NavLink>
+            <NavLink to="/bermuda" activeClassName className="Option">Bermudas</NavLink>
+            <NavLink to="/medias" activeClassName className="Option">Medias</NavLink>
           </Nav>
           <CartWidget/>
         </Container>
