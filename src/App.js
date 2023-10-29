@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import { addDoc, collection } from 'firebase/firestore';
 import { db } from './services/firebase';
 import { products } from './asyncMock';
+import Checkout from './componentes/checkout/Checkout';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Route path='/item/:itemId' element={<ItemDetailContainer/>}></Route>
             <Route path='*' element={<h1>404 NOT FOUND</h1>}></Route>
             <Route path='/cart' element={<Cart/>}></Route>
+            <Route path='/checkout' element={<Checkout></Checkout>}></Route>
           </Routes>
         </CartProvider>
       </BrowserRouter>
